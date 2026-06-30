@@ -1,0 +1,6 @@
+__pycache__/
+vendor/
+*.pyc
+*.log
+dist/
+build/
