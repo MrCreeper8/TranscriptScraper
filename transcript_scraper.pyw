@@ -14,9 +14,9 @@ APP_NAME = "Transcript Scraper"
 ROOT = Path(__file__).resolve().parent
 LOG_PATH = ROOT / "transcript-scraper.log"
 
-for vendor in (ROOT / "vendor", ROOT.parent / "neon-transcript-tool" / "vendor"):
-    if vendor.exists():
-        sys.path.insert(0, str(vendor))
+vendor = ROOT / "vendor"
+if vendor.exists():
+    sys.path.insert(0, str(vendor))
 
 try:
     from yt_dlp import YoutubeDL
